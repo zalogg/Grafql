@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty Characters</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rick and Morty Characters</h1>
+    <div class="characters">
+      <% characters.forEach((character, index) => { %>
+        <div class="character">
+          <img src="<%= character.image %>" alt="<%= character.name %>">
+          <p><%= character.name %></p>
+        </div>
+        <% if ((index + 1) % 2 === 0) { %>
+          <div class="clearfix"></div> <!-- Clearfix to ensure proper alignment -->
+        <% } %>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
